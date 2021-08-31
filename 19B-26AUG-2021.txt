@@ -1,0 +1,94 @@
+GIT CHANGES
+
+Q. How to do a single commit ?
+
+    # git add <filename>
+
+    # git commit -m "message" <filename>
+
+Q. How to commit more than one file ( flexible ) ?
+
+    # git add file1 file2 file3 ....
+
+    # git commit -m "message" file1 file2 file3 ...
+
+Q. shortcut to commit, if we have more 5 files ...
+
+    # git add .   (it will pick up all the files which are untracked, copy to stage)
+
+    # git commit . (it will pick up all the files which are staged or indexed,move to CA)
+
+Q. Command to see committed files or in CA ?
+
+    # git ls-files
+
+Q. Command to see files in staging ?
+
+* we don't have any specific command
+* # git status can help in this regard
+* based on the messages helps us to understand about the files in staging.
+
+***Q. Why Working directory clean ( linux ) messages ?
+
+   WTC  -- Working tree is clean ( windows)
+
+* we get the message under two conditions.
+
+  1st - All files there are in WD/WC == files that are there in CA
+
+    WD/WC==CA  ;; ***file content Level***
+
+  2nd - if number of files in stage = 0
+
+ both 1st and 2nd conditions have to be true.
+
+Q. Does git only work with text files or  how about other file formats ?
+
+    Git tracks any type of file format
+
+Q. How to create local configuration for git projects ?
+
+    step 1: go into git project # cd <project_name>
+
+    step 2 :  user name
+
+        # git config --local user.name <name>
+
+        # git config --local user.name john
+
+    step 3:  user email
+
+        # git config --local user.email <email>
+
+        # git config --local user.email john@gmail.com
+
+    Step 4: verify
+
+        # git config --list
+
+            .... ( global configurations )
+            ....
+            .... ( Local configurations )
+
+Q. How to see the last commit or recent commit of a repo?
+
+    # git show
+
+    we get details like - commit id, authour, date-time-timezone,commit message
+
+    # git show <CID>
+
+Q. How to see all the commits done so far on the repo ?
+
+    # git log --all
+
+    start to end(latest)
+
+Q. How to see recent commits done in the repo ?
+
+    # git log     ( it shows recent 10 commits of repo )
+
+Q. How to see all the commits info in a short format ?
+
+    # git log --oneline
+
